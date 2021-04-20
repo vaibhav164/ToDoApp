@@ -22,3 +22,8 @@
 ### Orientation Setting
 
     -To set the Bothe orientiatio for your all go to app.json file and change orientation from potrait mode to default.
+
+# Initial Outputs are as
+
+![Fist Image](./assets/images/img1.jpeg "Fist Image")
+![Second OutPut](./assets/images/img2.jpeg "Second Image")
