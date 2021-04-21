@@ -27,3 +27,14 @@
 
 ![Fist Image](./assets/images/img1.jpeg "Fist Image")
 ![Second OutPut](./assets/images/img2.jpeg "Second Image")
+
+# FlexBox:-
+
+1. FlexBoxs inside a view are diviede ther area in ratios as per their assign sizes.
+2. When we have a multiple line content `alignItems` propert works for each line item specificaly. to align complete content use `alignContent`.
+3. `alignContent` works only when have wraping of the content using `flexWrap` .
+
+# Positioning
+
+1. Absolute positioning will make the content move relative to it parent component and it disturbes the positioning of the other content of the parent component.
+2. Relative positioning will make the content move relative to its current position it do not disturbs any other positions.

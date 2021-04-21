@@ -1,9 +1,10 @@
 import * as React from 'react';
 import { Button, View } from 'react-native';
-import FirstPage from './FirstPage';
-
+import FlexExample from './components/FlexExample';
+import Textinput from "./components/TextInput";
 export default function App() {
   return (
-    <FirstPage />
+    // <FlexExample />
+    <Textinput />
   );
 }
