@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { Button, View } from 'react-native';
-import FlexExample from './components/FlexExample';
-import Textinput from "./components/TextInput";
+import List from "./components/List";
 export default function App() {
   return (
     // <FlexExample />
-    <Textinput />
+    // <Textinput />
+    <List />
   );
 }
