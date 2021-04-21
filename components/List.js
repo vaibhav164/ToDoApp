@@ -1,8 +1,5 @@
 import React, {useState} from "react";
 import {StyleSheet, View, Text, ScrollView, FlatList, TouchableOpacity} from "react-native";
-const pressHandeler = (id) => {
-    console.warn(id);
-}
 
 function List(){
     const [people, setpeople]=useState([
@@ -16,6 +13,17 @@ function List(){
         {name:"Tarun",id:8},
         {name:"Abhishek",id:9},            
     ]);
+
+    const pressHandeler = (item) => {
+        console.warn(item.id);
+        setpeople((currentpeople)=>{
+            return(
+                currentpeople.filter(people=>people.id!=item.id)
+            )});// in this setpeople when we pass a function we default get current state thus using it
+            // and then using filter function it checks that the current people id is not equal to the id 
+            //of the passed item of presshandeler if true then accet it when faulse removeit from array.
+    }    
+
     return(
         <View style={StyleSheet.container}>
 
@@ -24,7 +32,7 @@ function List(){
           keyExtractor={(item)=>item.id}
           data={people}
           renderItem={({item})=>(
-            <TouchableOpacity onPress={()=> pressHandeler(item.id)}>  
+            <TouchableOpacity onPress={()=> pressHandeler(item)}>  
                 <Text style={styles.listitems}>{item.name}</Text>
             </TouchableOpacity>   //   using Touchable opacity to view touch effect on each item and on press
                                 //  calling a function which returns the warning of id of item pressed
