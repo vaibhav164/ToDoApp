@@ -19,7 +19,7 @@ function List(){
         setpeople((currentpeople)=>{
             return(
                 currentpeople.filter(people=>people.id!=item.id)
-            )});// in this setpeople when we pass a function we default get current state thus using it
+            )});// in this **setpeople** when we pass a function we default get current state thus using it
             // and then using filter function it checks that the current people id is not equal to the id 
             //of the passed item of presshandeler if true then accet it when faulse removeit from array.
     }    

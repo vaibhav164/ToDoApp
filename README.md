@@ -17,11 +17,11 @@
 
 4.  `<Button>` this is used to insert button on project it syntax is as `<Button title="Click Me" onPress={() =>console.warn('Button Pressed')}/>`.
 
-5.  To get Dimension of Scree of the Device use the code as `console.log(Dimensions.get("screen"));`
+5.  To get Dimension of Screen of the Device use the code as `console.log(Dimensions.get("screen"));`
 
 ### Orientation Setting
 
-    -To set the Bothe orientiatio for your all go to app.json file and change orientation from potrait mode to default.
+    -To set the Both orientiation for your all devices go to app.json file and change orientation from potrait mode to default.
 
 # Initial Outputs are as
 
@@ -30,8 +30,8 @@
 
 # FlexBox:-
 
-1. FlexBoxs inside a view are diviede ther area in ratios as per their assign sizes.
-2. When we have a multiple line content `alignItems` propert works for each line item specificaly. to align complete content use `alignContent`.
+1. FlexBoxs inside a view divide the area in ratios as per their assign sizes.
+2. When we have a multiple line content `alignItems` property works for each line item specificaly. to align complete content use `alignContent`.
 3. `alignContent` works only when have wraping of the content using `flexWrap` .
    !["FlexBox"](./assets/images/Flex.png "FlexBox")
 
@@ -79,8 +79,9 @@
           />
 ```
 
-- It takes to props for sure data and renderItems data takes input of name of list to be rendered and renderItem takes the function to render the item as above.
+- It takes to props for sure **data** and **renderItems** data takes input of name of list to be rendered and renderItem takes the function to render the item as above.
 - Use key Extractor if there is no key property in list this keyExtractor line makes id property of item as key property.
+  -renderItem accepts only on prop name in destructuring we can only use item for destructuring i.e., `({item})` if we pass anything it will not work
 
 !["FaltList"](./assets/images/FlatList.png "FlatList")
 !["Column in FlatList"](./assets/images/ColumnFlatList.png "FlatList")
