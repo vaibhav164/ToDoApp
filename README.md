@@ -85,3 +85,55 @@
 
 !["FaltList"](./assets/images/FlatList.png "FlatList")
 !["Column in FlatList"](./assets/images/ColumnFlatList.png "FlatList")
+
+## Removing Item from array of USeState using onPress:-
+
+1. In renderingItem function we call filter function it syntax is as:-
+
+````renderItem={({item: kuchbhi})=>(
+                        <EditList name={kuchbhi} presshandler={pressHandler}/>
+                               )}```
+
+ Now as presshandler is called it has filer method as below:-
+ ```  const pressHandler =(item)=>{
+        setStudent((currentState)=>{
+            return(
+                currentState.filter(Student=>Student.Sid!=item.Sid)
+            );
+        })};
+````
+
+in press handler here single item of array is passed and in setStudent is function of useState it renders each items of array now
+`currentState.filter(Student=>Student.Sid != item.Sid)`
+in this for every student item if Student id is not same as item id then it is kept in array if this conditions false the item of perticular id is removed.
+**Note:-{In arrow function we can execute on thing or one fuction it cannot contain multiple functions or code}**
+
+## Adding Elements to the array:-
+
+1. for this we created Addlist component and Inseted text input with button.
+2. in textinput onChangeText created a function which takes text typed as below
+
+```const [text, setText]=useState('');
+    const changeTextHandler=(val)=>{
+        setText(val);
+    }
+```
+
+!["Column in FlatList"](./assets/images/TxtInput.png "FlatList")
+!["Column in FlatList"](./assets/images/TodoList.png "FlatList")
+!["Column in FlatList"](./assets/images/AddItem.png "FlatList")
+and in this there is a usestate initial value with empty string and setText accepts value typed by user as val. 3. now the new value for item text is val then created function onpress of Button as `submithandler(text)` and it takes value of text and then its discription is as bellow in TodoList file and further it is passed to Addlist component as prop.
+
+```const submitHandler=(text)=>{
+            setStudent((prevarray)=>{
+                return([
+                    {Sname:text,  age: Math.round(Math.random()*100)},
+                    ...prevarray
+                ])
+            })
+
+        }
+```
+
+in ths text is the prop passed and setStudent of usestate of Todolist is called.
+and renders each item as prevarray and then setStudent returns text passed added as an obj in Student array as `{Sname:text, age: Math.round(Math.random()*100)}` to this array to get added to list we do `...prevarray` ths adds the new abj to the start of the array.`...` is a Spred operator.

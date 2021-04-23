@@ -1,11 +1,14 @@
 import React from "react";
-import {View, TouchableOpacity, Text, StyleSheet} from "react-native";
+import {View, TouchableOpacity, Text, StyleSheet, TextInput} from "react-native";
+import { Ionicons} from '@expo/vector-icons';
 const EditList =({name, presshandler})=>{
    
     return(
-       <View>
+       <View style={styles.container}>
         <TouchableOpacity
+            style={styles.touchOp}
         onPress={()=> presshandler(name)}>
+         <Ionicons name='trash-outline' color="#333" size={30}/>
         <Text style={styles.text}>{name.Sname} {name.age}</Text>
         </TouchableOpacity>
        </View> 
@@ -16,13 +19,18 @@ const EditList =({name, presshandler})=>{
 export default EditList;
 const styles=StyleSheet.create({
     text:{
-        borderRadius:10,
-        borderWidth:1,
         padding:10,
         margin:10,
         fontSize:20,
         fontWeight:"bold",
         alignSelf:"center",
-        width:450,
+        width:350,
+    },
+    touchOp:{
+        borderRadius:10,
+        borderWidth:1,
+        flexDirection:"row",
     }
+
+    
 })
